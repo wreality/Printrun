@@ -260,7 +260,13 @@ class GCode(object):
             elif line.command[0] == "T":
                 current_tool = int(line.command[1:])
 
-            if line.command[0] == "G":
+            if line.command == "G7":
+                pass
+            elif line.command == "G8":
+                pass
+            elif line.command == "G9":
+                pass
+            elif line.command[0] == "G":
                 parse_coordinates(line, split_raw, imperial)
 
             # Compute current position
